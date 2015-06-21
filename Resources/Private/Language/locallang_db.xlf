@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-20T17:54:48Z" product-name="powermail_sass">
+		<header/>
+		<body>
+			<trans-unit id="tx_powermail_domain_model_form.css.powermail_horizontal">
+				<source>Horizontal</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_form.css.powermail_vertical">
+				<source>Vertical</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_form.css.powermail_compact">
+				<source>Compact</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_form.css.powermail_inline">
+				<source>Inline</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

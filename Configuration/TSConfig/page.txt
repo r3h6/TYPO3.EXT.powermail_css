@@ -1,0 +1,44 @@
+TCEFORM {
+	tx_powermail_domain_model_forms {
+		css {
+			removeItems = layout1, layout2, layout3
+			addItems {
+				powermail_horizontal = LLL:EXT:powermail_sass/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_form.css.powermail_horizontal
+				powermail_vertical = LLL:EXT:powermail_sass/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_form.css.powermail_vertical
+				powermail_compact = LLL:EXT:powermail_sass/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_form.css.powermail_compact
+				powermail_inline = LLL:EXT:powermail_sass/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_form.css.powermail_inline
+			}
+		}
+	}
+
+	//tx_powermail_domain_model_pages < .tx_powermail_domain_model_forms
+	//tx_powermail_domain_model_fields < .tx_powermail_domain_model_forms
+
+	tx_powermail_domain_model_pages {
+		css {
+			removeItems = layout1, layout2, layout3
+			addItems {
+				powermail_fieldset_nolegend = No legend
+			}
+		}
+	}
+
+	tx_powermail_domain_model_fields {
+		css {
+			removeItems = layout1, layout2, layout3
+			types {
+				radio {
+					addItems {
+						powermail_radio_inline = Radio Inline
+					}
+				}
+				check {
+					addItems {
+						powermail_check_nolabel = No label
+						powermail_check_inline = Radio Inline
+					}
+				}
+			}
+		}
+	}
+}

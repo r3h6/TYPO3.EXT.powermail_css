@@ -1,0 +1,28 @@
+@import 'compass';
+
+@mixin powermail_vertical ($direction: left){
+
+	.powermail_fieldwrap {
+
+		> fieldset {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		> fieldset > .powermail_label,
+		> .powermail_label {
+			display: block;
+
+		}
+
+		> .powermail_field {
+			display: block;
+			width: 100%;
+		}
+		> .powermail_submit {
+			width: auto;
+		}
+	}
+
+}

@@ -1,0 +1,37 @@
+@import 'compass';
+
+@mixin powermail_horizontal ($width, $direction: left){
+
+	.powermail_fieldwrap {
+		@include pie-clearfix;
+		padding-left: $width;
+
+		> fieldset {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		> fieldset > .powermail_label,
+		> .powermail_label {
+			width: $width;
+			float: $direction;
+			position: relative;
+			@if unit($width) == "%" {
+				margin-left: -(100% / (100% - $width) * $width);
+			} @else {
+				margin-left: -$width;
+			}
+
+		}
+
+		> .powermail_field {
+			display: block;
+			width: 100%;
+		}
+		> .powermail_submit {
+			width: auto;
+		}
+	}
+
+}

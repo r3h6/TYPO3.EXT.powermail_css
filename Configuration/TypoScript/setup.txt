@@ -1,0 +1,3 @@
+page.includeCSS {
+	tx_powermailsass = EXT:powermail_sass/Resources/Public/StyleSheets/all.css
+}

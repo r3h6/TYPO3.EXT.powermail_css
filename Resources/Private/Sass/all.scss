@@ -1,0 +1,46 @@
+@import 'compass';
+@import 'horizontal';
+@import 'vertical';
+@import 'compact';
+
+$label-width: 20%;
+
+
+.tx-powermail * {
+	@include box-sizing(border-box);
+}
+
+.powermail_horizontal {
+	@include powermail_horizontal($label-width);
+}
+
+
+.powermail_vertical {
+	@include powermail_vertical();
+}
+
+.powermail_compact {
+	@include powermail_compact();
+}
+
+.powermail_radio_inline {
+	.powermail_radio_outer {
+		.powermail_radio_inner {
+			@include inline-block(top);
+			padding-left: 20px;
+			> input {
+				position: absolute;
+				margin-left: -20px;
+			}
+			+ .powermail_radio_inner {
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+.powermail_check_nolabel {
+	> fieldset > legend {
+		@include squish-text();
+	}
+}
