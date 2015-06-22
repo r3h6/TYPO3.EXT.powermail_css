@@ -1,3 +1,4 @@
 page.includeCSS {
 	tx_powermailsass = EXT:powermail_sass/Resources/Public/StyleSheets/all.css
+	tx_powermailsass_bootstrap = EXT:powermail_sass/Resources/Public/StyleSheets/bootstrap.css
 }

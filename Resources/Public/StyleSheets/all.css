@@ -87,8 +87,9 @@
   width: auto;
 }
 
-/* line 28, ../../Private/Sass/all.scss */
-.powermail_radio_inline .powermail_radio_outer .powermail_radio_inner {
+/* line 26, ../../Private/Sass/all.scss */
+.powermail_check_inline .powermail_check_inner,
+.powermail_radio_inline .powermail_radio_inner {
   display: inline-block;
   vertical-align: top;
   *vertical-align: auto;
@@ -96,17 +97,20 @@
   *display: inline;
   padding-left: 20px;
 }
-/* line 31, ../../Private/Sass/all.scss */
-.powermail_radio_inline .powermail_radio_outer .powermail_radio_inner > input {
+/* line 30, ../../Private/Sass/all.scss */
+.powermail_check_inline .powermail_check_inner > input,
+.powermail_radio_inline .powermail_radio_inner > input {
   position: absolute;
   margin-left: -20px;
 }
+
 /* line 35, ../../Private/Sass/all.scss */
-.powermail_radio_inline .powermail_radio_outer .powermail_radio_inner + .powermail_radio_inner {
+.powermail_check_inline .powermail_check_inner + .powermail_check_inner,
+.powermail_radio_inline .powermail_radio_inner + .powermail_radio_inner {
   margin-left: 20px;
 }
 
-/* line 43, ../../Private/Sass/all.scss */
+/* line 42, ../../Private/Sass/all.scss */
 .powermail_check_nolabel > fieldset > legend {
   font: 0/0 serif;
   text-shadow: none;
