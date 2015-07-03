@@ -3,26 +3,38 @@
 @mixin powermail_inline ($direction: left){
 
 	.powermail_fieldwrap {
-
+		display: inline-block;
+		vertical-align: top;
 		> fieldset {
 			display: block;
 			margin: 0;
 			padding: 0;
 			border: none;
 		}
-		> fieldset > .powermail_label,
 		> .powermail_label {
-			@include squish-text();
-
+			// @include squish-text();
+			display: inline-block;
 		}
 
-		> .powermail_field {
-			display: block;
-			width: 100%;
+		> fieldset > .powermail_label,{
+			float: left;
+			margin-right: 1em;
+			+ div {
+				display: inline-block;
+			}
 		}
-		> .powermail_submit {
-			width: auto;
+
+		+ .powermail_fieldwrap {
+			margin-left: 10px;
 		}
+
+		// > .powermail_field {
+		// 	display: block;
+		// 	width: 100%;
+		// }
+		// > .powermail_submit {
+		// 	width: auto;
+		// }
 	}
 
 }

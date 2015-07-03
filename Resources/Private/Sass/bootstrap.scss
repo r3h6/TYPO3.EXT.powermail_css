@@ -1,5 +1,10 @@
 @import 'compass';
 
+// =============================================================================
+// Variables
+// =============================================================================
+
+// Grays
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
@@ -7,40 +12,59 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
+// Brand colors
 $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
 
+// Font size
 $font-size-base:          14px !default;
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
+// State colors
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
+// UI border radius
+$border-radius-base:        4px !default;
 
+// UI padding
 $padding-base-vertical:     6px !default;
 $padding-base-horizontal:   12px !default;
 
+// Legend
 $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
 
-
-
-
-$border-radius-base:        4px !default;
-
+// Input
 $input-bg:                       #fff !default;
 $input-color:                    $gray !default;
 $input-border-radius:            $border-radius-base !default;
 $input-border:                   #ccc !default;
 $input-border-focus:             #66afe9 !default;
 $input-color-placeholder:        #999 !default;
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default; //** Default `.form-control` height
 
-//** Default `.form-control` height
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+// Buttons
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$btn-font-weight:                normal !default;
+$btn-border-radius-base:         $border-radius-base !default;
+
+// Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
 
 
+
+// =============================================================================
+// Mixins
+// =============================================================================
 
 // Form control focus state
 //
@@ -63,68 +87,237 @@ $input-height-base:              ($line-height-computed + ($padding-base-vertica
   }
 }
 
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
 
-// // Placeholder text
-// @mixin placeholder($color: $input-color-placeholder) {
-//   // Firefox
-//   &::-moz-placeholder {
-//     color: $color;
-//     opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
-//   }
-//   &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
-//   &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
-// }
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
 
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
 
-	.powermail_fieldset {
-		padding: 0;
-		margin: 0;
-		border: 0;
-		// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
-		// so we reset that to ensure it behaves more like a standard block element.
-		// See https://github.com/twbs/bootstrap/issues/12359.
-		min-width: 0;
-	}
-
-	.powermail_legend {
-		display: block;
-		width: 100%;
-		padding: 0;
-		margin-bottom: $line-height-computed;
-		font-size: ($font-size-base * 1.5);
-		line-height: inherit;
-		color: $legend-color;
-		border: 0;
-		border-bottom: 1px solid $legend-border-color;
-	}
-
-	.powermail_label {
-		display: inline-block;
-		max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-		margin-bottom: 5px;
-		font-weight: bold;
-	}
-
-	.powermail_field {
-		@include border-radius($input-border-radius);
-		@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-		@include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
-		  // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus;
-
-@include input-placeholder {
-    color: $input-color-placeholder;
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
   }
 
-		display: block;
-		width: 100%;
-		height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-		padding: $padding-base-vertical $padding-base-horizontal;
-		font-size: $font-size-base;
-		line-height: $line-height-base;
-		color: $input-color;
-		background-color: $input-bg;
-		background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-		border: 1px solid $input-border;
-		border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// WebKit-style focus
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+// =============================================================================
+// Form styles
+// =============================================================================
+
+.powermail_fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	// Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+	// so we reset that to ensure it behaves more like a standard block element.
+	// See https://github.com/twbs/bootstrap/issues/12359.
+	min-width: 0;
+}
+
+.powermail_legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: $line-height-computed;
+	font-size: ($font-size-base * 1.5);
+	line-height: inherit;
+	color: $legend-color;
+	border: 0;
+	border-bottom: 1px solid $legend-border-color;
+}
+
+.powermail_fieldwrap {
+	margin-bottom: 15px;
+}
+
+.powermail_fieldwrap_radio,
+.powermail_fieldwrap_check {
+  .powermail_inline & {
+    padding-top: 0.4em;
+  }
+}
+
+.powermail_label {
+	display: inline-block;
+	max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.powermail_label[title] {
+	cursor: help;
+}
+
+.powermail_field, {
+	@include border-radius($input-border-radius);
+	@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+	@include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+	// Customize the `:focus` state to imitate native WebKit styles.
+	@include form-control-focus;
+
+	@include input-placeholder {
+		color: $input-color-placeholder;
 	}
+
+	display: block;
+	width: 100%;
+	height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+	padding: $padding-base-vertical $padding-base-horizontal;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $input-color;
+	background-color: $input-bg;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid $input-border;
+	border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+
+	&.powermail_textarea {
+		height: auto;
+	}
+	&.parsley-error {
+		@include form-control-focus($state-danger-text);
+		border-color: $state-danger-text;
+	}
+
+  .powermail_inline & {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+// =============================================================================
+// Butons
+// =============================================================================
+
+.powermail_reset,
+.powermail_submit {
+	@include box-shadow(none);
+	@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  width: auto;
+
+  // @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    // @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    @include opacity(.65);
+    @include box-shadow(none);
+    cursor: $cursor-disabled;
+  }
+
+  // [converter] extracted a& to a.btn
+}
+.powermail_submit {
+	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.powermail_reset {
+	@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+
+// =============================================================================
+// Error styles
+// =============================================================================
+
+.parsley-errors-list {
+	color: $state-danger-text;
+}

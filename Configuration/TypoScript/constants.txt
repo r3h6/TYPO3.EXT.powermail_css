@@ -1,0 +1,7 @@
+plugin.tx_powermailsass {
+	# cat=powermail_css//0010; type=boolean; label= Include Bootstrap CSS: Displays form fields Twiiter Bootstrap alike.
+	includeBootstrapCss = 0
+
+	# cat=powermail_css//0020; type=boolean; label= Include DateTimePicker CSS: Include default stylesheet for date-time-picker.
+	includeDateTimePickerCss = 0
+}

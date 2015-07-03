@@ -20,7 +20,9 @@
 			display: block;
 			width: 100%;
 		}
+		> .powermail_reset,
 		> .powermail_submit {
+			display: inline-block;
 			width: auto;
 		}
 	}

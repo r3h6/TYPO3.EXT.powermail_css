@@ -1,4 +1,10 @@
 page.includeCSS {
 	tx_powermailsass = EXT:powermail_sass/Resources/Public/StyleSheets/all.css
+
+	xdsoft_datetimepicker = EXT:powermail_sass/Resources/Public/StyleSheets/Vendors/DateTimePicker.css
+	xdsoft_datetimepicker.isTrue = plugin.tx_powermailsass.
+	includeDateTimePickerCss
+
 	tx_powermailsass_bootstrap = EXT:powermail_sass/Resources/Public/StyleSheets/bootstrap.css
+	tx_powermailsass_bootstrap.isTrue = plugin.tx_powermailsass.includeBootstrapCss
 }

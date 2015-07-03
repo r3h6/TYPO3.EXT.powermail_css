@@ -9,11 +9,20 @@
 			<trans-unit id="tx_powermail_domain_model_form.css.powermail_vertical">
 				<source>Vertical</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_form.css.powermail_compact">
-				<source>Compact</source>
-			</trans-unit>
 			<trans-unit id="tx_powermail_domain_model_form.css.powermail_inline">
 				<source>Inline</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_pages.css.powermail_fieldset_nolegend">
+				<source>Hide legend</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_nolabel">
+				<source>Hide label</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_inline">
+				<source>Inline</source>
+			</trans-unit>
+			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_inline_nolabel">
+				<source>Inline + Hide label</source>
 			</trans-unit>
 		</body>
 	</file>
