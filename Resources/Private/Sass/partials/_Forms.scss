@@ -1,0 +1,18 @@
+// =============================================================================
+// Layouts
+// =============================================================================
+
+.powermail_horizontal {
+	@include powermail_vertical();
+	@media (min-width: $screen-sm-min) {
+		@include powermail_horizontal($label-width);
+	}
+}
+
+.powermail_vertical {
+	@include powermail_vertical();
+}
+
+.powermail_inline {
+	@include powermail_inline();
+}

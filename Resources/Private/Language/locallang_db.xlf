@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-20T17:54:48Z" product-name="powermail_sass">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-06-20T17:54:48Z" product-name="powermail_css">
 		<header/>
 		<body>
 			<trans-unit id="tx_powermail_domain_model_form.css.powermail_horizontal">

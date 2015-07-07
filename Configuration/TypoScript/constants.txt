@@ -1,4 +1,4 @@
-plugin.tx_powermailsass {
+plugin.tx_powermailcss {
 	# cat=powermail_css//0010; type=boolean; label= Include Bootstrap CSS: Displays form fields Twiiter Bootstrap alike.
 	includeBootstrapCss = 0
 

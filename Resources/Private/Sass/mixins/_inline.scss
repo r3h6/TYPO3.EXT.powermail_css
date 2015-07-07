@@ -1,6 +1,6 @@
 @import 'compass';
 
-@mixin powermail_inline ($direction: left){
+@mixin powermail_inline (){
 
 	.powermail_fieldwrap {
 		display: inline-block;

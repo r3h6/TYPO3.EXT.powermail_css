@@ -1,0 +1,24 @@
+// =============================================================================
+// Fields
+// =============================================================================
+
+.powermail_check_inline .powermail_check_inner,
+.powermail_radio_inline .powermail_radio_inner {
+	@include inline-block(top);
+	padding-left: 20px;
+	> input {
+		position: absolute;
+		margin-left: -20px;
+	}
+}
+.powermail_check_inline .powermail_check_inner + .powermail_check_inner,
+.powermail_radio_inline .powermail_radio_inner + .powermail_radio_inner {
+	margin-left: 20px;
+}
+
+
+.powermail_nolabel {
+	.powermail_label {
+		@include squish-text();
+	}
+}
