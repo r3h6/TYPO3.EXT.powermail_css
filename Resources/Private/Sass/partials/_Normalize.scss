@@ -2,10 +2,16 @@
 // Normalize
 // =============================================================================
 
-.tx-powermail * {
-	@include box-sizing(border-box);
+.tx-powermail {
+	* {
+		@include box-sizing(border-box);
+	}
 
 	legend {
 		padding: 0;
 	}
+}
+.powermail_fieldwrap {
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
 }

@@ -2,6 +2,10 @@
 // Layouts
 // =============================================================================
 
+@import '../mixins/horizontal';
+@import '../mixins/vertical';
+@import '../mixins/inline';
+
 .powermail_horizontal {
 	@include powermail_vertical();
 	@media (min-width: $screen-sm-min) {

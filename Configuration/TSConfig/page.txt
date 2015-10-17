@@ -10,9 +10,6 @@ TCEFORM {
 		}
 	}
 
-	//tx_powermail_domain_model_pages < .tx_powermail_domain_model_forms
-	//tx_powermail_domain_model_fields < .tx_powermail_domain_model_forms
-
 	tx_powermail_domain_model_pages {
 		css {
 			removeItems = layout1, layout2, layout3
@@ -32,14 +29,12 @@ TCEFORM {
 				radio {
 					addItems {
 						powermail_inline = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline
-
 						powermail_inline_nolabel = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline_nolabel
 					}
 				}
 				check {
 					addItems {
 						powermail_inline = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline
-
 						powermail_inline_nolabel = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline_nolabel
 					}
 				}

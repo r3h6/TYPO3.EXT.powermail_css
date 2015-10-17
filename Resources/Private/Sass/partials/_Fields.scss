@@ -2,8 +2,10 @@
 // Fields
 // =============================================================================
 
-.powermail_check_inline .powermail_check_inner,
-.powermail_radio_inline .powermail_radio_inner {
+
+
+.powermail_inline .powermail_check_inner,
+.powermail_inline .powermail_radio_inner {
 	@include inline-block(top);
 	padding-left: 20px;
 	> input {
@@ -11,14 +13,29 @@
 		margin-left: -20px;
 	}
 }
-.powermail_check_inline .powermail_check_inner + .powermail_check_inner,
-.powermail_radio_inline .powermail_radio_inner + .powermail_radio_inner {
+.powermail_inline .powermail_check_inner + .powermail_check_inner,
+.powermail_inline .powermail_radio_inner + .powermail_radio_inner {
 	margin-left: 20px;
 }
 
 
+.powermail_fieldwrap_reset,
+.powermail_fieldwrap_submit {
+	@include inline-block(top);
+}
+.powermail_fieldwrap_reset + .powermail_fieldwrap_submit,
+.powermail_fieldwrap_submit + .powermail_fieldwrap_reset {
+	padding-left: 0;
+}
+
 .powermail_nolabel {
 	.powermail_label {
 		@include squish-text();
+	}
+}
+
+.powermail_captcha_outer {
+	> img {
+		vertical-align: top;
 	}
 }

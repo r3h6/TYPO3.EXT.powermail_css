@@ -193,6 +193,7 @@ $cursor-disabled:         not-allowed !default;
 }
 
 .powermail_fieldwrap {
+  margin-top: 0;
   margin-bottom: 15px;
 }
 
@@ -200,6 +201,9 @@ $cursor-disabled:         not-allowed !default;
 .powermail_fieldwrap_check {
   .powermail_inline & {
     padding-top: 0.4em;
+  }
+  label {
+    font-weight: inherit;
   }
 }
 
@@ -211,6 +215,12 @@ $cursor-disabled:         not-allowed !default;
 }
 .powermail_label[title] {
   cursor: help;
+}
+legend.powermail_label {
+  width: auto;
+  color: inherhit;
+  font-size: inherit;
+  border-bottom: 0;
 }
 
 .powermail_field, {
@@ -249,6 +259,11 @@ $cursor-disabled:         not-allowed !default;
     width: auto;
   }
 }
+
+.powermail_captcha {
+  margin-bottom: 3px;
+}
+
 
 // =============================================================================
 // Butons

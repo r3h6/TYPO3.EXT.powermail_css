@@ -12,7 +12,6 @@
 			border: none;
 		}
 		> .powermail_label {
-			// @include squish-text();
 			display: inline-block;
 		}
 
@@ -27,14 +26,5 @@
 		+ .powermail_fieldwrap {
 			margin-left: 10px;
 		}
-
-		// > .powermail_field {
-		// 	display: block;
-		// 	width: 100%;
-		// }
-		// > .powermail_submit {
-		// 	width: auto;
-		// }
 	}
-
 }
