@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Powermail CSS',
-	'description' => '',
+	'description' => 'Three different layouts for your powermail forms.',
 	'category' => 'plugin',
 	'author' => 'r3h6',
 	'author_email' => 'r3h6@outlook.com',
