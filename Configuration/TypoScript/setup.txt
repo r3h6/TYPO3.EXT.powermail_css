@@ -7,3 +7,13 @@ page.includeCSSLibs {
     tx_powermailcss_bootstrap = EXT:powermail_css/Resources/Public/StyleSheets/bootstrap.css
     tx_powermailcss_bootstrap.if.isTrue = {$plugin.tx_powermailcss.includeBootstrapCss}
 }
+
+page.cssInline {
+    1449096088 = USER
+    1449096088 {
+        includeLibs = EXT:powermail_css/Resources/Private/PHP/GeneralUtility.php
+        userFunc = Tx_PowermailCss_GeneralUtility->calculateWidth
+        stdWrap.if.isTrue = {$plugin.tx_powermailcss.labelWidth}
+        labelWidth = {$plugin.tx_powermailcss.labelWidth}
+    }
+}
