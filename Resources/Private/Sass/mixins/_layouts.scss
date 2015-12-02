@@ -1,0 +1,113 @@
+////
+/// Powermail layouts
+///
+/// @author R3 H6
+/// @group mixin
+////
+
+@import 'compass';
+
+/// Mixin for creating a horizontal form.
+///
+/// @param px|percent $width Label width
+/// @param left|right $direction Document text flow
+@mixin powermail_horizontal ($width, $direction: left){
+
+	.powermail_fieldwrap {
+		@include pie-clearfix;
+		padding-left: $width;
+
+		> fieldset {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		> fieldset > .powermail_label,
+		> .powermail_label {
+			float: $direction;
+			position: relative;
+			@if unit($width) == "%" {
+				margin-left: -(100% / (100% - $width) * $width);
+				width: (100% / (100% - $width) * $width);
+			} @else {
+				margin-left: -$width;
+				width: $width;
+			}
+
+		}
+
+		> .powermail_field {
+			display: block;
+			width: 100%;
+		}
+		> .powermail_reset,
+		> .powermail_submit {
+			display: inline-block;
+			width: auto;
+		}
+	}
+
+}
+
+/// Mixin for creating a vertical form.
+///
+@mixin powermail_vertical (){
+
+	.powermail_fieldwrap {
+
+		> fieldset {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		> fieldset > .powermail_label,
+		> .powermail_label {
+			display: block;
+
+		}
+
+		> .powermail_field {
+			display: block;
+			width: 100%;
+		}
+		> .powermail_reset,
+		> .powermail_submit {
+			display: inline-block;
+			width: auto;
+		}
+	}
+
+}
+
+/// Mixin for creating a inline form.
+///
+@mixin powermail_inline (){
+
+	.powermail_fieldwrap {
+		display: inline-block;
+		vertical-align: top;
+		> fieldset {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		> .powermail_label {
+			display: inline-block;
+		}
+
+		> fieldset > .powermail_label,{
+			float: left;
+			margin-right: 1em;
+			+ div {
+				display: inline-block;
+			}
+		}
+
+		+ .powermail_fieldwrap {
+			margin-left: 10px;
+		}
+	}
+}

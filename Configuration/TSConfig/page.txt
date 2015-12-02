@@ -1,7 +1,7 @@
 TCEFORM {
 	tx_powermail_domain_model_forms {
 		css {
-			removeItems = layout1, layout2, layout3
+			removeItems = layout1, layout2, layout3, nolabel
 			addItems {
 				powermail_horizontal = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_form.css.powermail_horizontal
 				powermail_vertical = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_form.css.powermail_vertical
@@ -12,7 +12,7 @@ TCEFORM {
 
 	tx_powermail_domain_model_pages {
 		css {
-			removeItems = layout1, layout2, layout3
+			removeItems = layout1, layout2, layout3, nolabel
 			addItems {
 				powermail_fieldset_nolegend = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_pages.css.powermail_fieldset_nolegend
 			}
@@ -21,7 +21,7 @@ TCEFORM {
 
 	tx_powermail_domain_model_fields {
 		css {
-			removeItems = layout1, layout2, layout3
+			removeItems = layout1, layout2, layout3, nolabel
 			addItems {
 				powermail_nolabel = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_nolabel
 			}

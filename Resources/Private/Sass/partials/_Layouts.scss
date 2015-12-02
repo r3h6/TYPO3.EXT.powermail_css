@@ -1,22 +1,97 @@
-// =============================================================================
-// Layouts
-// =============================================================================
+////
+/// Powermail layouts
+///
+/// @author R3 H6
+/// @group partial
+////
 
-@import '../mixins/horizontal';
-@import '../mixins/vertical';
-@import '../mixins/inline';
+@import '../mixins/layouts';
+
+/// ============================================================================
+/// Layouts
+/// ============================================================================
 
 .powermail_horizontal {
-	@include powermail_vertical();
-	@media (min-width: $screen-sm-min) {
-		@include powermail_horizontal($label-width);
-	}
+    @include powermail_vertical();
+    @media (min-width: $screen-sm-min) {
+        @include powermail_horizontal($label-width);
+    }
 }
 
 .powermail_vertical {
-	@include powermail_vertical();
+    @include powermail_vertical();
 }
 
 .powermail_inline {
-	@include powermail_inline();
+    @include powermail_inline();
+}
+
+/// ============================================================================
+/// Fields
+/// ============================================================================
+
+.powermail_inline .powermail_check_inner,
+.powermail_inline .powermail_radio_inner {
+    @include inline-block(top);
+    padding-left: 20px;
+    > input {
+        position: absolute;
+        margin-left: -20px;
+    }
+}
+.powermail_inline .powermail_check_inner + .powermail_check_inner,
+.powermail_inline .powermail_radio_inner + .powermail_radio_inner {
+    margin-left: 20px;
+}
+
+
+.powermail_fieldwrap_reset,
+.powermail_fieldwrap_submit {
+    @include inline-block(top);
+}
+.powermail_fieldwrap_reset + .powermail_fieldwrap_submit,
+.powermail_fieldwrap_submit + .powermail_fieldwrap_reset {
+    padding-left: 0;
+}
+
+.powermail_nolabel {
+    .powermail_label {
+        @include squish-text();
+    }
+}
+
+.powermail_captcha_outer {
+    > img {
+        vertical-align: top;
+    }
+}
+
+/// ============================================================================
+/// Errors
+/// ============================================================================
+
+.parsley-errors-list {
+    display: none;
+    margin: 0.5em 0;
+    &.filled {
+        display: block;
+    }
+}
+
+/// ============================================================================
+/// Normalize
+/// ============================================================================
+
+.tx-powermail {
+    * {
+        @include box-sizing(border-box);
+    }
+
+    legend {
+        padding: 0;
+    }
+}
+.powermail_fieldwrap {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }

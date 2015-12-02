@@ -1,9 +1,9 @@
 page.includeCSSLibs {
-	tx_powermailcss = EXT:powermail_css/Resources/Public/StyleSheets/layout.css
+    tx_powermailcss = EXT:powermail_css/Resources/Public/StyleSheets/layouts.css
 
-	xdsoft_datetimepicker = EXT:powermail_css/Resources/Public/StyleSheets/Vendors/DateTimePicker.css
-	xdsoft_datetimepicker.if.isTrue = {$plugin.tx_powermailcss.includeDateTimePickerCss}
+    xdsoft_datetimepicker = EXT:powermail_css/Resources/Public/StyleSheets/Vendors/datetimepicker.css
+    xdsoft_datetimepicker.if.isTrue = {$plugin.tx_powermailcss.includeDateTimePickerCss}
 
-	tx_powermailcss_bootstrap = EXT:powermail_css/Resources/Public/StyleSheets/bootstrap.css
-	tx_powermailcss_bootstrap.if.isTrue = {$plugin.tx_powermailcss.includeBootstrapCss}
+    tx_powermailcss_bootstrap = EXT:powermail_css/Resources/Public/StyleSheets/bootstrap.css
+    tx_powermailcss_bootstrap.if.isTrue = {$plugin.tx_powermailcss.includeBootstrapCss}
 }
