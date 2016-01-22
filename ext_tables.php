@@ -4,3 +4,9 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Powermail CSS');
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+    $_EXTKEY,
+    'Configuration/PageTS/powermail.txt',
+    'Powermail CSS'
+);
