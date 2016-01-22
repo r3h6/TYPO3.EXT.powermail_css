@@ -5,7 +5,26 @@
 /// @group partial
 ////
 
+////
+/// Powermail layouts
+///
+/// @author R3 H6
+/// @group partial
+////
+
 @import '../mixins/layouts';
+
+/// Label width for horizontal forms.
+///
+/// @access public
+/// @type percent|pixel|em|rem
+$label-width  : 33.333%;
+
+/// Breakpoint for horizontal forms.
+///
+/// @access public
+/// @type pixel|em
+$screen-sm-min: 768px !default;
 
 /// ============================================================================
 /// Layouts
@@ -30,28 +49,11 @@
 /// Fields
 /// ============================================================================
 
-.powermail_inline .powermail_check_inner,
-.powermail_inline .powermail_radio_inner {
-    @include inline-block(top);
-    padding-left: 20px;
-    > input {
-        position: absolute;
-        margin-left: -20px;
-    }
-}
-.powermail_inline .powermail_check_inner + .powermail_check_inner,
-.powermail_inline .powermail_radio_inner + .powermail_radio_inner {
-    margin-left: 20px;
-}
 
+@include powermail_fieldwrap_buttons();
 
-.powermail_fieldwrap_reset,
-.powermail_fieldwrap_submit {
-    @include inline-block(top);
-}
-.powermail_fieldwrap_reset + .powermail_fieldwrap_submit,
-.powermail_fieldwrap_submit + .powermail_fieldwrap_reset {
-    padding-left: 0;
+.powermail_fieldwrap_inline {
+    @include powermail_fieldwrap_inline();
 }
 
 .powermail_nolabel {
@@ -70,13 +72,7 @@
 /// Errors
 /// ============================================================================
 
-.parsley-errors-list {
-    display: none;
-    margin: 0.5em 0;
-    &.filled {
-        display: block;
-    }
-}
+@include powermail_parsley_errors();
 
 /// ============================================================================
 /// Normalize

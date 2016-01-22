@@ -85,6 +85,8 @@
 ///
 @mixin powermail_inline (){
 
+	@include powermail_fieldwrap_inline();
+
 	.powermail_fieldwrap {
 		display: inline-block;
 		vertical-align: top;
@@ -108,6 +110,50 @@
 
 		+ .powermail_fieldwrap {
 			margin-left: 10px;
+		}
+	}
+}
+
+/// Mixin for creating inline radio and checkboxes.
+///
+@mixin powermail_fieldwrap_inline (){
+
+	.powermail_check_inner,
+	.powermail_radio_inner {
+		@include inline-block(top);
+		padding-left: 20px;
+		> input {
+			position: absolute;
+			margin-left: -20px;
+		}
+	}
+	.powermail_check_inner + .powermail_check_inner,
+	.powermail_radio_inner + .powermail_radio_inner {
+		margin-left: 20px;
+	}
+}
+
+/// Mixin for placing reset and submit button beside each other.
+///
+@mixin powermail_fieldwrap_buttons (){
+	.powermail_fieldwrap_reset,
+	.powermail_fieldwrap_submit {
+		@include inline-block(top);
+	}
+	.powermail_fieldwrap_reset + .powermail_fieldwrap_submit,
+	.powermail_fieldwrap_submit + .powermail_fieldwrap_reset {
+		padding-left: 0;
+	}
+}
+
+/// Mixin for basic javascript errors.
+///
+@mixin powermail_parsley_errors (){
+	.parsley-errors-list {
+		display: none;
+		margin: 0.5em 0;
+		&.filled {
+			display: block;
 		}
 	}
 }
