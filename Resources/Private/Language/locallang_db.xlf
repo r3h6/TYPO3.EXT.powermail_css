@@ -18,10 +18,10 @@
 			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_nolabel">
 				<source>Hide label</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_inline">
+			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_fieldwrap_inline">
 				<source>Inline</source>
 			</trans-unit>
-			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_inline_nolabel">
+			<trans-unit id="tx_powermail_domain_model_fields.css.powermail_fieldwrap_inline_nolabel">
 				<source>Inline + Hide label</source>
 			</trans-unit>
 		</body>
