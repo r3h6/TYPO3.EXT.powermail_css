@@ -1,7 +1,13 @@
 plugin.tx_powermailcss {
-	# cat=powermail_css//0010; type=boolean; label= Include Bootstrap CSS: Displays form fields Twiiter Bootstrap alike.
-	includeBootstrapCss = 0
+    # cat=powermail_css//0010; type=boolean; label= Include Bootstrap CSS: Displays form fields Twiiter Bootstrap alike.
+    includeBootstrapCss = 0
 
-	# cat=powermail_css//0020; type=boolean; label= Include DateTimePicker CSS: Include default stylesheet for date-time-picker.
-	includeDateTimePickerCss = 0
+    # cat=powermail_css//0020; type=boolean; label= Include DateTimePicker CSS: Include default stylesheet for date-time-picker.
+    includeDateTimePickerCss = 0
+
+    # cat=powermail_css//0030; type=string; label= Label width: Label width for horizontal forms (px|em|rem|%).
+    labelWidth = 33.333%
+
+    # cat=powermail_css//0040; type=string; label= Breakpoint: Breakpoint for horizontal forms (px|em).
+    breakpoint = min-width: 768px
 }
