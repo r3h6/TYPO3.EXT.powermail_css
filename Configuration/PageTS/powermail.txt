@@ -28,14 +28,14 @@ TCEFORM {
 			types {
 				radio {
 					addItems {
-						powermail_inline = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline
-						powermail_inline_nolabel = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline_nolabel
+						powermail_fieldwrap_inline = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_fieldwrap_inline
+						powermail_fieldwrap_inline_nolabel = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_fieldwrap_inline_nolabel
 					}
 				}
 				check {
 					addItems {
-						powermail_inline = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline
-						powermail_inline_nolabel = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_inline_nolabel
+						powermail_fieldwrap_inline = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_fieldwrap_inline
+						powermail_fieldwrap_inline_nolabel = LLL:EXT:powermail_css/Resources/Private/Language/locallang_db.xlf:tx_powermail_domain_model_fields.css.powermail_fieldwrap_inline_nolabel
 					}
 				}
 			}
